@@ -1,0 +1,355 @@
+/* 효소온 김포 온기드림점 랜딩 — Figma B안(브랜드소개) PC 1265 / 모바일 375 기준 */
+@font-face {
+  font-family: "Eulyoo1945";
+  src: url("../fonts/eulyoo1945-semibold-subset.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --cream: #f6efe6;
+  --sand: #efe3d3;
+  --ink: #3f2a1f;
+  --brown: #6b4a35;
+  --pill: #4a2f22;
+  --terra: #b0613c;
+  --gold: #c9a46a;
+  --muted: #8a7563;
+  --line: #e2d5c4;
+  --line2: #d8c6b0;
+  --white: #fffaf4;
+  --dark: #2e1f17;
+  --soft: #f3e6d6;
+  --note: #bfa98f;
+  --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --serif: "Eulyoo1945", "Noto Serif KR", serif;
+  --content: 1065px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); word-break: keep-all; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.serif { font-family: var(--serif); font-weight: 600; }
+.mo { display: none; }
+:focus-visible { outline: 2px solid var(--terra); outline-offset: 3px; }
+
+/* ---------- 공통 ---------- */
+.wrap { width: min(var(--content), 100%); margin: 0 auto; }
+.h2 { font-size: 48px; line-height: 1; letter-spacing: .03em; }
+.h2--2l { line-height: 1.3; }
+.h3 { font-size: 30px; line-height: 1; letter-spacing: .03em; }
+.lead { font-size: 18px; line-height: 31px; color: var(--brown); max-width: 520px; }
+.head-block { display: flex; flex-direction: column; gap: 26px; }
+.note { font-size: 13px; line-height: 20px; color: var(--muted); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 60px; padding: 0 40px; border-radius: 999px; font-size: 17px; line-height: 26px; font-weight: 700; white-space: nowrap; transition: opacity .15s, background-color .15s; }
+.btn:hover { opacity: .88; }
+.btn--fill { background: var(--pill); color: var(--white); }
+.btn--line { border: 1px solid var(--pill); color: var(--pill); }
+.btn--light { background: var(--white); color: var(--pill); }
+.btn--line-light { border: 1px solid var(--white); color: var(--white); }
+
+/* ---------- 헤더 ---------- */
+.head { background: var(--cream); border-bottom: 1px solid var(--line); }
+.head__in { width: min(1064px, 100% - 40px); height: 88px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand__logo { width: 44px; height: 61px; }
+.brand__name { font-size: 24px; letter-spacing: .03em; white-space: nowrap; }
+.head__right { display: flex; align-items: center; gap: 85px; }
+.gnb { display: flex; gap: 35px; }
+.gnb a { font-size: 15px; line-height: 22px; font-weight: 500; color: var(--brown); white-space: nowrap; }
+.gnb a:hover { color: var(--terra); }
+.head__cta { height: 48px; padding: 0 40px; font-size: 15px; line-height: 22px; }
+
+/* ---------- 비주얼 ---------- */
+.hero {
+  padding: 113px 20px; display: flex; flex-direction: column; align-items: center; gap: 110px; text-align: center;
+  background: linear-gradient(rgba(46, 28, 18, .5), rgba(46, 28, 18, .5)), url("../img/hero.webp") center / cover no-repeat var(--dark);
+}
+.hero__body { display: flex; flex-direction: column; align-items: center; gap: 45px; }
+.hero__copy { display: flex; flex-direction: column; align-items: center; gap: 25px; }
+.hero__title { font-size: 80px; line-height: 1.3; letter-spacing: .03em; color: var(--white); }
+.hero__sub { font-size: 20px; line-height: 30px; color: var(--soft); }
+.hero__btns { display: flex; gap: 32px; }
+.hero__btns .btn { width: 220px; padding: 0; }
+.hero__slogan { font-size: 20px; line-height: 1; letter-spacing: .32em; color: var(--soft); }
+
+.band { background: var(--terra); color: var(--white); text-align: center; padding: 19px 20px; font-size: 17px; line-height: 26px; font-weight: 600; letter-spacing: .03em; }
+
+/* ---------- 공간 ---------- */
+.space { min-height: 960px; padding: 150px 20px; display: flex; align-items: center; justify-content: center; gap: 40px; }
+.space__main { width: 600px; flex: 0 1 600px; display: flex; flex-direction: column; gap: 60px; }
+.space .lead { max-width: 500px; }
+.fig { display: flex; flex-direction: column; gap: 16px; }
+.fig__img { width: 100%; object-fit: cover; border-radius: 16px; }
+.space__img1 { aspect-ratio: 600 / 420; }
+.space__side { width: 425px; flex: 0 1 425px; }
+.space__img2 { aspect-ratio: 425 / 560; }
+.fig figcaption { font-size: 14px; line-height: 21px; font-weight: 500; color: var(--muted); }
+
+/* ---------- 효소찜질 · 코스 ---------- */
+.enzyme { background: var(--sand); padding: 90px 100px; }
+.enzyme .wrap { display: flex; flex-direction: column; gap: 54px; }
+.enzyme__top { display: flex; gap: 35px; justify-content: space-between; padding-bottom: 90px; border-bottom: 1px solid var(--line2); }
+.enzyme__text { width: 560px; display: flex; flex-direction: column; gap: 122px; }
+.enzyme__text .head-block { gap: 25px; }
+.enzyme__img { width: 470px; aspect-ratio: 1; object-fit: cover; border-radius: 16px; flex-shrink: 1; min-width: 0; }
+.feats { display: flex; gap: 32px; }
+.feats li { display: flex; flex-direction: column; gap: 16px; width: 129px; position: relative; }
+.feats li + li { padding-left: 32px; width: 161px; }
+.feats li + li::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; border-left: 1px solid var(--line); }
+.feats strong { font-size: 22px; line-height: 1; letter-spacing: -.05em; white-space: nowrap; }
+.feats span { font-size: 15px; line-height: 24px; font-weight: 500; color: var(--brown); }
+
+.courses { display: flex; flex-direction: column; gap: 36px; }
+.courses__head { display: flex; flex-direction: column; gap: 11px; }
+.courses__head p { font-size: 16px; line-height: 24px; color: var(--brown); }
+.courses__list { display: flex; flex-direction: column; gap: 40px; }
+.course { display: flex; align-items: center; gap: 15px; }
+.course__name { width: 284px; flex-shrink: 0; display: flex; align-items: center; gap: 20px; }
+.han { width: 64px; height: 64px; border: 1px solid var(--terra); border-radius: 50%; display: grid; place-items: center; font-size: 30px; color: var(--terra); letter-spacing: -.05em; }
+.course__name strong { font-size: 24px; letter-spacing: -.05em; }
+.pills { display: flex; gap: 15px; }
+.pills--12 { gap: 12px; }
+.pills--8 { gap: 8px; }
+.pill { height: 52px; border-radius: 26px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; line-height: 22px; font-weight: 600; color: var(--white); white-space: nowrap; }
+.pill--brown { background: var(--pill); }
+.pill--terra { background: var(--terra); }
+.pill--gold { background: var(--gold); color: var(--ink); }
+.p1 { width: 290px; } .p2 { width: 250px; } .p3 { width: 150px; } .p4 { width: 190px; }
+
+/* ---------- 가격 ---------- */
+.price { background: var(--pill); padding: 79px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.price__head { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.price__title { color: var(--cream); }
+.tag { display: inline-flex; align-items: center; justify-content: center; width: 220px; height: 38px; border-radius: 19px; background: var(--terra); color: var(--white); font-size: 14px; line-height: 21px; font-weight: 700; }
+.plist { width: min(901px, 100%); margin-top: 78px; display: flex; flex-direction: column; gap: 64px; text-align: left; }
+.prow { display: flex; align-items: center; gap: 15px; }
+.prow__name { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.phan { width: 60px; font-size: 40px; line-height: 1; color: var(--gold); letter-spacing: -.05em; }
+.prow__name div { display: flex; flex-direction: column; gap: 11px; }
+.prow__name strong { font-size: 30px; line-height: 1; letter-spacing: -.05em; color: var(--cream); }
+.prow__name div span { font-size: 16px; line-height: 24px; color: var(--line2); }
+.prow__line { flex: 1; margin: 0 10px; border-top: 1px dashed var(--brown); }
+.prow__won { width: 190px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; color: var(--cream); letter-spacing: -.05em; }
+.prow__won s { font-size: 20px; line-height: 1; opacity: .55; }
+.prow__won b { font-size: 44px; line-height: 1; font-weight: 600; }
+.price__note { margin-top: 67px; font-size: 14px; line-height: 21px; letter-spacing: .03em; color: var(--note); }
+.price__btn { margin-top: 29px; width: 240px; padding: 0; }
+
+/* ---------- 효능 ---------- */
+.effect { padding: 137px 20px; display: flex; justify-content: center; gap: 70px; }
+.effect__img { width: 470px; flex: 0 1 470px; min-width: 0; aspect-ratio: 470 / 660; object-fit: cover; border-radius: 16px; }
+.effect__body { width: 525px; flex: 0 1 525px; display: flex; flex-direction: column; gap: 29px; }
+.effect__body .h2 { margin-bottom: 47px; }
+.elist > div { display: flex; align-items: center; min-height: 100px; }
+.elist > div + div { border-top: 1px solid var(--line); }
+.elist dt { width: 200px; flex-shrink: 0; font-size: 24px; line-height: 1; letter-spacing: -.05em; }
+.elist dd { font-size: 16px; line-height: 26px; }
+
+/* ---------- 예약 ---------- */
+.reserve { background: var(--sand); padding: 113px 100px; }
+.reserve__body { margin-top: 61px; display: flex; flex-direction: column; align-items: center; }
+.steps { position: relative; display: flex; justify-content: center; gap: 40px; width: 100%; }
+.steps::before { content: ""; position: absolute; top: 28px; left: 50%; width: min(692px, 70%); transform: translateX(-50%); border-top: 1px solid var(--line2); }
+.steps li { position: relative; width: 320px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.num { width: 56px; height: 56px; border-radius: 50%; background: var(--pill); color: var(--cream); display: grid; place-items: center; font-size: 24px; letter-spacing: -.05em; }
+.steps p { font-size: 22px; line-height: 1; }
+.chans { margin-top: 79px; padding-top: 40px; border-top: 1px solid var(--line2); width: 100%; display: flex; justify-content: center; }
+.chan { width: 320px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 37px; text-align: center; }
+.chan + .chan { border-left: 1px solid var(--line2); }
+.chan__txt { display: flex; flex-direction: column; align-items: center; gap: 11px; }
+.chan__txt strong { font-size: 26px; line-height: 1; letter-spacing: -.05em; }
+.chan__txt span { font-size: 18px; line-height: 27px; color: var(--brown); }
+.chan__txt .chan__tel { font-size: 24px; line-height: 36px; font-weight: 700; }
+.chan:last-child { gap: 28px; }
+.chan__btn { width: 180px; height: 52px; padding: 0; font-size: 15px; line-height: 22px; }
+.reserve .note { margin-top: 20px; font-size: 14px; line-height: 21px; }
+
+/* ---------- 오시는 길 ---------- */
+.location { padding: 140px 20px; display: flex; align-items: center; justify-content: center; gap: 82px; }
+.location__main { width: 556px; flex: 0 1 556px; display: flex; flex-direction: column; gap: 48px; }
+.location__main .h2 { margin-bottom: 1px; }
+.info { margin-top: 1px; }
+.info > div { display: flex; align-items: center; min-height: 77px; padding: 0 20px; border-bottom: 1px solid var(--line); }
+.info dt { width: 130px; flex-shrink: 0; font-size: 15px; line-height: 22px; font-weight: 700; color: var(--brown); }
+.info dd { font-size: 18px; line-height: 27px; }
+.location__btns { display: flex; justify-content: center; gap: 16px; }
+.location__btns .btn { height: 58px; padding: 0; width: 220px; }
+.location__btns .btn--line { width: 200px; }
+.location__img { width: 425px; flex: 0 1 425px; min-width: 0; aspect-ratio: 425 / 560; object-fit: cover; border-radius: 16px; }
+
+/* ---------- CTA ---------- */
+.cta { background: var(--terra); padding: 80px 20px; display: flex; flex-direction: column; align-items: center; gap: 35px; text-align: center; }
+.cta__copy { display: flex; flex-direction: column; gap: 17px; }
+.cta__title { font-size: 52px; line-height: 1; letter-spacing: .03em; color: var(--white); }
+.cta__slogan { font-size: 20px; line-height: 1.5; letter-spacing: .32em; color: #f6e2d3; }
+.cta__btns { display: flex; gap: 32px; }
+.cta__btns .btn { width: 220px; padding: 0; }
+
+/* ---------- 푸터 ---------- */
+.foot { background: var(--dark); padding: 37px 100px; }
+.foot__in { width: min(1064px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+.foot__brand { display: flex; align-items: center; gap: 14px; }
+.foot__brand img { width: 42px; height: 58px; }
+.foot__brand strong { font-size: 22px; letter-spacing: -.05em; color: var(--cream); }
+.foot__txt p { font-size: 14px; line-height: 21px; color: var(--note); }
+.foot__txt p + p { margin-top: 7px; }
+.foot__txt .foot__copy { margin-top: 17px; font-size: 12px; line-height: 18px; color: var(--muted); }
+
+.dock { display: none; }
+
+/* ---------- 중간 폭(태블릿) 보정 ---------- */
+@media (max-width: 1100px) and (min-width: 769px) {
+  .gnb { gap: 20px; }
+  .head__right { gap: 32px; }
+  .enzyme, .reserve { padding-left: 40px; padding-right: 40px; }
+  .enzyme__text { width: auto; flex: 1; gap: 60px; }
+  .feats { flex-wrap: wrap; }
+  .course { flex-wrap: wrap; }
+  .pills { flex-wrap: wrap; }
+  .location { gap: 40px; }
+}
+@media (max-width: 960px) and (min-width: 769px) { .gnb { display: none; } }
+
+/* ---------- 모바일 (Figma 375 프레임) ---------- */
+@media (max-width: 768px) {
+  .pc { display: none; }
+  .mo { display: inline; }
+  .h2 { font-size: 28px; }
+  .h2--2l, .h2--2l-mo { line-height: 1.3; }
+  .lead { font-size: 15px; line-height: 24px; max-width: none; }
+  .head-block { gap: 14px; }
+  .note { font-size: 12px; line-height: 20px; }
+
+  .head__in { width: 100%; height: 78px; padding: 8px 20px; gap: 12px; }
+  .brand { gap: 10px; }
+  .brand__name { font-size: 17px; letter-spacing: -.05em; }
+  .gnb { display: none; }
+  .head__cta { height: 36px; width: 96px; padding: 0; font-size: 13px; }
+
+  .hero { min-height: 636px; padding: 113px 20px; gap: 74px; justify-content: center; }
+  .hero__body { gap: 20px; }
+  .hero__title { font-size: 34px; }
+  .hero__sub { font-size: 15px; line-height: 30px; }
+  .hero__btns { gap: 32px; }
+  .hero__btns .btn { width: 150px; height: 50px; font-size: 15px; }
+  .hero__slogan { font-size: 13px; }
+
+  .band { padding: 14px 20px; font-size: 13px; line-height: 22px; letter-spacing: 0; }
+
+  .space { min-height: 0; padding: 56px 20px; flex-direction: column; align-items: stretch; gap: 28px; }
+  .space__main { width: auto; flex: none; gap: 28px; }
+  .space__side { width: auto; flex: none; }
+  .fig { gap: 10px; }
+  .fig__img { border-radius: 12px; }
+  .space__img1 { aspect-ratio: 335 / 236; }
+  .space__img2 { aspect-ratio: 335 / 400; }
+  .fig figcaption { font-size: 13px; }
+
+  .enzyme { padding: 56px 20px; }
+  .enzyme .wrap { gap: 32px; }
+  .enzyme__top { flex-direction: column; gap: 32px; padding-bottom: 0; border-bottom: 0; }
+  .enzyme__text { display: contents; }
+  .enzyme__text .head-block { gap: 14px; order: 1; }
+  .enzyme__img { order: 2; width: 100%; aspect-ratio: 335 / 300; border-radius: 12px; }
+  .feats { order: 3; flex-direction: column; gap: 0; border-top: 1px solid var(--line2); }
+  .feats li, .feats li + li { width: auto; padding: 16px 0; flex-direction: row; align-items: center; gap: 12px; border-bottom: 1px solid var(--line2); min-height: 81px; }
+  .feats li + li::before { display: none; }
+  .feats strong { width: 128px; flex-shrink: 0; font-size: 17px; }
+  .feats span { font-size: 14px; }
+  .courses { gap: 32px; padding-top: 16px; }
+  .courses__head { gap: 10px; }
+  .h3 { font-size: 24px; }
+  .courses__head p { font-size: 14px; }
+  .courses__list { gap: 20px; }
+  .course { align-items: center; gap: 14px; }
+  .course__name { display: contents; }
+  .han { width: 48px; height: 48px; font-size: 22px; flex-shrink: 0; }
+  .course { display: grid; grid-template-columns: 48px 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 8px; }
+  .course .han { grid-row: 1 / 3; }
+  .course__name strong { font-size: 19px; line-height: 1; }
+  .pills, .pills--12, .pills--8 { gap: 6px; flex-wrap: wrap; }
+  .pill { width: auto; height: 30px; padding: 0 14px; border-radius: 15px; font-size: 12px; }
+
+  .price { padding: 56px 20px; }
+  .price__head { gap: 16px; }
+  .price__title { font-size: 30px; line-height: 1.3; }
+  .tag { width: auto; height: 32px; padding: 0 14px; border-radius: 16px; font-size: 13px; line-height: 22px; font-weight: 600; }
+  .plist { margin-top: 28px; gap: 0; border-top: 1px solid var(--brown); }
+  .prow { justify-content: space-between; padding: 20px 0; border-bottom: 1px solid var(--brown); }
+  .prow__line { display: none; }
+  .prow__name { gap: 12px; flex-shrink: 1; }
+  .phan { width: auto; font-size: 28px; }
+  .prow__name div { gap: 6px; }
+  .prow__name strong { font-size: 20px; }
+  .prow__name div span { font-size: 13px; line-height: 20px; }
+  .prow__won { width: 112px; gap: 3px; }
+  .prow__won s { font-size: 15px; }
+  .prow__won b { font-size: 28px; }
+  .price__note { margin-top: 28px; font-size: 12px; line-height: 20px; letter-spacing: 0; }
+  .price__btn { margin-top: 28px; width: 100%; height: 54px; font-size: 15px; }
+
+  .effect { padding: 56px 20px; flex-direction: column; gap: 24px; }
+  .effect__body { display: contents; }
+  .effect__body .h2 { order: 1; margin: 0; }
+  .effect__img { order: 2; width: 100%; flex: none; aspect-ratio: 335 / 320; border-radius: 12px; }
+  .elist { order: 3; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .elist > div { flex-direction: column; align-items: flex-start; gap: 8px; min-height: 0; padding: 18px 0; }
+  .elist dt { width: auto; font-size: 20px; }
+  .elist dd { font-size: 15px; color: var(--brown); }
+  .effect .note { order: 4; }
+
+  .reserve { padding: 56px 20px; }
+  .reserve__body { margin-top: 28px; align-items: stretch; }
+  .steps { flex-direction: column; gap: 14px; }
+  .steps::before { display: none; }
+  .steps li { width: auto; flex-direction: row; gap: 14px; text-align: left; }
+  .num { width: 40px; height: 40px; font-size: 18px; flex-shrink: 0; }
+  .steps p { font-size: 17px; }
+  .chans { margin-top: 28px; padding-top: 0; border-top: 0; flex-direction: column; gap: 12px; }
+  .chan, .chan + .chan, .chan:last-child { width: auto; padding: 20px; flex-direction: row; justify-content: space-between; align-items: center; gap: 12px; text-align: left; background: var(--cream); border: 1px solid var(--line2); border-radius: 12px; }
+  .chan__txt { align-items: flex-start; gap: 8px; }
+  .chan__txt strong { font-size: 20px; }
+  .chan__txt span { font-size: 14px; line-height: 21px; }
+  .chan__txt .chan__tel { font-size: 17px; line-height: 26px; }
+  .chan__btn { width: 92px; height: 40px; font-size: 13px; flex-shrink: 0; }
+  .reserve .note { margin-top: 28px; font-size: 12px; line-height: 20px; }
+
+  .location { padding: 56px 20px; flex-direction: column; align-items: stretch; gap: 24px; }
+  .location__main { display: contents; }
+  .location__main .h2 { order: 1; margin: 0; }
+  .location__img { order: 2; width: 100%; flex: none; aspect-ratio: 335 / 280; border-radius: 12px; }
+  .info { order: 3; margin: 0; border-top: 1px solid var(--line); }
+  .info > div { min-height: 0; padding: 14px 4px; gap: 12px; align-items: flex-start; }
+  .info dt { width: 64px; font-size: 13px; }
+  .info dd { font-size: 14px; line-height: 21px; }
+  .location__btns { order: 4; gap: 9px; }
+  .location__btns .btn, .location__btns .btn--line { flex: 1; width: auto; height: 52px; font-size: 15px; }
+
+  .cta { padding: 56px 20px; gap: 28px; }
+  .cta__copy { gap: 14px; }
+  .cta__title { font-size: 32px; line-height: 1.3; }
+  .cta__slogan { font-size: 14px; line-height: 1; }
+  .cta__btns { width: 100%; gap: 9px; }
+  .cta__btns .btn { flex: 1; width: auto; height: 52px; font-size: 15px; }
+
+  .foot { padding: 36px 20px 115px; }
+  .foot__in { gap: 20px; }
+  .foot__brand { gap: 12px; }
+  .foot__brand strong { font-size: 18px; }
+  .foot__txt p { font-size: 12px; line-height: 20px; }
+  .foot__txt p + p { margin-top: 6px; }
+  .foot__txt .foot__copy { margin-top: 6px; font-size: 11px; }
+
+  .dock { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; gap: 10px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); background: var(--white); border-top: 1px solid var(--line); }
+  .dock .btn { height: 50px; font-size: 15px; line-height: 22px; padding: 0; }
+  .dock__tel { width: 110px; flex-shrink: 0; }
+  .dock__book { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
