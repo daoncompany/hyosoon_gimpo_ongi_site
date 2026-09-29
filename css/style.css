@@ -352,4 +352,14 @@ ul, ol { list-style: none; }
   .dock__book { flex: 1; }
 }
 
+/* 작은 폰(≤360) — Figma 375 기준에서 넘치지 않도록 축소 */
+@media (max-width: 360px) {
+  .head__in { padding: 8px 16px; }
+  .brand__logo { width: 34px; height: 47px; }
+  .brand__name { font-size: 15px; }
+  .head__cta { width: 84px; font-size: 12px; }
+  .hero__btns { width: 100%; gap: 10px; }
+  .hero__btns .btn { flex: 1; width: auto; font-size: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
